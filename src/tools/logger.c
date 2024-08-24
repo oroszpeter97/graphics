@@ -1,8 +1,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
-#include "logger.h"
+#include "tools/logger.h"
 
 static DateTime log_file_date_time = {0, 0, 0, 0, 0, 0};
 

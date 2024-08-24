@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include "logger.h"
+#include "tools/logger.h"
+#include "core/vector.h"
 
 int main(){
 	log_init();
-	log_message(INFO, "This is an info log!", TO_BOTH);
-	sleep(1);
-	log_message(WARNING, "This is a warning log!", TO_BOTH);
-	sleep(2);
-	log_message(ERROR, "This is an error log!", TO_BOTH);
-	sleep(3);
-	log_message(DEBUG, "This is a debug log!", TO_BOTH);
+
+	Vector3* vector = new_vector();
+	vector->print(vector);
+	vector->dispose(vector);	
+
 	return 0;
 }

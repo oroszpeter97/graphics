@@ -1,8 +1,6 @@
 #ifndef LOGGER_H
 #define LOGGER_H
 
-#include <time.h>
-
 #define MAX_LOG_LENGTH 1024
 #define MAX_LOG_FILENAME_LENGTH 512
 

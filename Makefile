@@ -5,13 +5,14 @@ CFLAGS = -Wall -Wextra -Iinclude -g
 # Source directories
 SRC_DIR = src
 TOOLS_DIR = $(SRC_DIR)/tools
+CORE_DIR = $(SRC_DIR)/core
 OBJ_DIR = obj
 
 # Target executable
 TARGET = bin/game
 
 # Find all .c files in src/ and tools/ directories
-SRCS = $(wildcard $(SRC_DIR)/*.c) $(wildcard $(TOOLS_DIR)/*.c)
+SRCS = $(wildcard $(SRC_DIR)/*.c) $(wildcard $(TOOLS_DIR)/*.c) $(wildcard $(CORE_DIR)/*.c)
 
 # Generate object files in the obj directory
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
@@ -21,7 +22,7 @@ all: $(TARGET)
 
 # Create obj directory if it doesn't exist
 $(OBJ_DIR):
-	mkdir -p $(OBJ_DIR) $(OBJ_DIR)/tools
+	mkdir -p $(OBJ_DIR) $(OBJ_DIR)/tools $(OBJ_DIR)/core
 
 # Build the target executable
 $(TARGET): $(OBJS)
@@ -34,6 +35,9 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 # Clean up generated files
 clean:
 	rm -rf $(OBJ_DIR) $(TARGET)
+
+clean_logs:
+	rm logs/*
 
 run:
 	./$(TARGET)
