@@ -11,7 +11,6 @@ int main(){
 	Vector3* vector = vector3_new();
 	vector3_print(vector);
 	vector3_dispose(vector);	
-	s
 
 	return 0;
 }
