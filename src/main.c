@@ -2,14 +2,15 @@
 #include <unistd.h>
 
 #include "tools/logger.h"
-#include "core/vector.h"
+#include "core/vector3.h"
 
 int main(){
 	log_init();
+	log_message(WARNING, "This is a warning", TO_CONSOLE);
 
-	Vector3* vector = new_vector();
-	vector->print(vector);
-	vector->dispose(vector);	
+	Vector3* vector = vector_new3();
+	vector3_print(vector);
+	vector3_dispose(vector);	
 
 	return 0;
 }

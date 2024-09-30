@@ -5,10 +5,10 @@ typedef struct Vector{
 	double x;
 	double y;
 	double z;
-	void (*print)(struct Vector*);
-	void (*dispose)(struct Vector*);
 } Vector3;
 
-Vector3* new_vector();
+Vector3* new_vector3();
+void vector3_print(Vector3 *vector3);
+void vector3_dispose(Vector3 *vector3);
 
 #endif
