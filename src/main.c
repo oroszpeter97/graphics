@@ -8,7 +8,7 @@ int main(){
 	log_init();
 	log_message(WARNING, "This is a warning", TO_CONSOLE);
 
-	Vector3* vector = vector_new3();
+	Vector3* vector = vector3_new();
 	vector3_print(vector);
 	vector3_dispose(vector);	
 

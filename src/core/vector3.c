@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "core/vector.h"
+#include "core/vector3.h"
 #include "tools/logger.h"
 
 /* private functions*/

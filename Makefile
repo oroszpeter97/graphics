@@ -20,9 +20,9 @@ OBJS = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
 # Default target
 all: $(TARGET)
 
-# Create obj directory if it doesn't exist
+# Create directories if it doesn't exist
 $(OBJ_DIR):
-	mkdir -p $(OBJ_DIR) $(OBJ_DIR)/tools $(OBJ_DIR)/core
+	mkdir -p $(OBJ_DIR) $(OBJ_DIR)/tools $(OBJ_DIR)/core bin logs
 
 # Build the target executable
 $(TARGET): $(OBJS)
