@@ -1,6 +1,6 @@
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -Iinclude -g -lm
+CFLAGS = -Wall -Wextra -Iinclude -g
 
 # Source directories
 SRC_DIR = src
@@ -26,7 +26,7 @@ $(OBJ_DIR):
 
 # Build the target executable
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -lm
 
 # Compile .c files to .o files
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
